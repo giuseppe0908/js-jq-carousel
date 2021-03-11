@@ -6,14 +6,12 @@ $(document).ready(function(){
 function carosel(){
   var frecciaSx = $('.prev > i.fa-angle-left');
   var frecciaDx = $('.next > i.fa-angle-right');
-  var raccoltaimg = $('.images');
-  var imag = $('.images img')
-
+  //
+  //
 
   frecciaDx.click(function(){
-      var img = $('.images .active');
-
-      var first = $('.images > .first');
+      var img = $('.active');
+      var first = $(' .first');
       img.removeClass('active').next().addClass('active');
 
       if (img.hasClass('last')) {
@@ -24,8 +22,8 @@ function carosel(){
   })
 
   frecciaSx.click(function(){
-    var img = $('.images  > .active');
-    var last = $('.images .last');
+    var img = $('.active');
+    var last = $('.last');
     img.removeClass('active').prev().addClass('active');
      if (img.hasClass('first')) {
        img.removeClass('active');
